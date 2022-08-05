@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+          href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+          rel="stylesheet"
+  />
+  <link rel="stylesheet" href="/css/layout.css" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title th:text="${site.name}"></title>
+</head>
+
+<body>
+<div th:replace="fragments :: header"></div>
+
+<div class="thumbnails">
+  <a th:href="${site.url}">
+    <img th:src="${site.imgUrl}" th:alt="${site.altImgTxt}" />
+  </a>
+</div>
+<div class="review-hashtag">
+  <div class="review-container">
+    <h1>Reviews</h1>
+    <ul>
+      <li th:each="thing:${site.reviews}" th:text="${thing.name}"></li>
+    </ul>
+  </div>
+  <div class="hashtag-container">
+    <h1>#Hashtags</h1>
+    <ul>
+      <li th:each="thing:${site.hashtags}">
+        <a th:href="'/hashtags/' + ${thing.id}" th:text="${thing.name}"></a>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="review-form-container">
+  <div class="hashtag-form">
+    <form th:action="'/sites/' + ${site.id} + '/addHashtag'" method="POST">
+      <label for="hashtagID">Add a #Hashtag</label>
+      <input type="text" name="hashtag" id="hashtagID" />
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  <div class="review-form">
+    <form th:action="'/sites/' + ${site.id} + '/addReview'" method="POST">
+      <p>Leave a Review:</p>
+      <textarea
+              name="review"
+              id="review-text-area"
+              cols="50"
+              rows="8"
+      ></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+<main>
+  <div th:replace="fragments :: footer"></div>
+</main>
+</body>
+</html>

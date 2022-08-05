@@ -1,0 +1,290 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: rgb(40 23 48);
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 2px;
+}
+
+a{
+text-decoration: none;
+color: black;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(112 86 115);
+    border: 3px black solid;
+    font-size: 1.6rem;
+    letter-spacing: 6px;
+    text-decoration: none;
+
+}
+
+header a {
+    color: hsl(295deg 37% 69%);
+    text-decoration: none;
+}
+.header-container:hover{
+    background-color:#594d59;
+    color:white;
+}
+
+.header-container {
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 2px solid black;
+    background-color:hsl(295deg 1% 15%);
+    margin:7px;
+}
+.img-container{
+    display: flex;
+    justify-content: center;
+}
+.img-container img {
+    width: 50vw;
+    height: auto;
+    margin-top: 3%;
+}
+
+.thumbnails img {
+    width: 18vw;
+    height: auto;
+    margin-top: 5%;
+    margin-left: 40%;
+    border: 3px solid black;
+    border-radius:15%;
+}
+
+
+.foot {
+    margin-top: 5%;
+    background-color: rgb(112 86 115);
+    font-size: 1.1rem;
+    border: 3px black solid;
+    font-size: 1.6rem;
+    padding: 2%;
+}
+.foot a{
+    text-decoration: none;
+    border: 2px solid black;
+    padding: 15px;
+    border-radius: 15%;
+    color: hsl(295deg 37% 69%);
+    font-weight: bold;
+    background-color: hsl(295deg 1% 15%);
+}
+.foot a:hover{
+    background-color:#594d59;
+    color:white;
+}
+.foot ul{
+    display:flex;
+    justify-content: space-around;
+}
+.foot ul li {
+    list-style:none;
+}
+
+.review-hashtag {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 5%;
+}
+
+.hashtag-container {
+    background-color: rgb(112 86 115);
+    border: 2px solid black;
+    display: flex;
+    width: 25%;
+    flex-direction: column;
+    padding: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+    height: auto;
+    border-radius:5%;
+}
+
+.hashtag-container a:hover {
+    color: grey;
+}
+
+.hashtag-container ul{
+    list-style-type: none;
+    font-size: 1.2rem;
+    margin-left: 2%;
+}
+
+.hashtag-container li {
+    margin-top: 4%;
+    text-decoration: none;
+}
+
+
+.review-container {
+    background-color: rgb(112 86 115);
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    width: 60%;
+    margin-right: 5%;
+   border-radius:5%;
+}
+
+.review-container ul{
+    list-style: none;
+    font-size: 1.2rem;
+    margin-left: 2%;
+    margin-top: 5%;
+}
+.review-container li {
+    border: 2px solid black;
+    margin-top: 4%;
+    padding: 3%;
+    background-color: hsl(295deg 1% 15%);
+    width: 60%;
+    color: white;
+    border-radius:5%;
+}
+
+.review-form-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+    border: 2px solid black;
+    width: 40%;
+    margin-left: 30%;
+    padding: 2%;
+    background-color: rgb(112 86 115);
+    border-radius:5%;
+}
+
+.hashtag-form{
+    display: flex;
+    padding: 1%;
+    margin-top: 2%;
+}
+
+.hashtag-form label{
+    font-size: 1.1rem;
+    padding: 4%;
+}
+
+.hashtag-form input{
+    height: 30px;
+    width: 200px;
+    border-radius: 5%;
+    padding: 2%;
+}
+
+.hashtag-form button{
+    background-color: rgb(40 23 48);
+    font-size: 15px;
+    padding: 2%;
+    border-radius: 10%;
+    margin-left: 45%;
+    margin-top: 4%;
+    color:hsl(295deg 37% 69%);
+}
+.hashtag-form button:hover {
+    background-color: #594d59;
+    color: white;
+  }
+
+  .review-form{
+      display: flex;
+
+  }
+
+  .review-form p{
+    font-size: 1.2rem;
+    margin-left: 5%;
+    padding: 4%;
+  }
+
+  textarea {
+      resize: none;
+      border-radius: 2%;
+      margin-left: 5%;
+  }
+
+.review-form button{
+    background-color: rgb(40 23 48);
+    font-size: 20px;
+    padding: 2%;
+    border-radius: 10%;
+    margin-left: 45%;
+    margin-top: 4%;
+    color:hsl(295deg 37% 69%);
+}
+
+.review-form button:hover {
+    background-color: #594d59;
+    color: white;
+  }
+
+
+  .hashtag-ul {
+    margin-top: 4%;
+    text-align: center;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+  }
+  .hashtag-ul li {
+    background-color:#796c7a;
+    font-size: 1.3rem;
+    padding: 1%;
+    border: 2px solid black;
+    margin-left:2%;
+    margin-right:2%;
+    border-radius: 5%;
+    list-style-type: none;
+    text-align: center;
+    display: flex;
+    flex-direction:column;
+  }
+  .hashtag-ul a{
+  color: hsl(295deg 37% 69%);
+  }
+
+.hashtag-ul a:hover{
+    color: grey;
+}
+.hashtag-h1{
+text-align: center;
+font-size: 2rem;
+margin: 1%;
+color:hsl(295deg 37% 69%);
+}
+.inside-list{
+    text-align:center;
+    margin: 2%;
+    font-size: 1.5rem;
+    list-style-type: none;
+
+}
+
+.icon {
+    width:150px;
+    height:125px;
+    border-radius: 15%;
+}
+
+.hashtags {
+display: flex;
+justify-content: center;
+margin-top: 2%;
+}
+
+.hashtags img{
+border-radius: 5%;
+width: auto;
+height: 30vh;
+}

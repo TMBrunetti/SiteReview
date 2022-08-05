@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Hashtags</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div th:replace="fragments :: header"></div>
+<!--<div th:replace="fragments.html :: header"></div>-->
+    <div class="hashtags">
+        <img src="/img/hashtag.jpg" alt="A picture of a hashtag symbol">
+    </div>
+<div class="container">
+    <ul class="hashtag-ul">
+        <li th:each="thing:${hashtags}" ><a th:href="'/hashtags/' +
+        ${thing.id}" th:text="${thing.name}"></a></li>
+    </ul>
+</div>
+<!--<div th:replace="fragments.html :: footer"></div>-->
+<main>
+    <nav class="foot">
+        <ul>
+            <li th:each = "thing:${categories}">
+                <a th:text="${thing.name}" th:href="'/categories/' + ${thing.id}"></a></li>
+        </ul>
+    </nav>
+</main>
+
+</body>
+</html>
